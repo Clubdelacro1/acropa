@@ -233,7 +233,8 @@ input:focus,textarea:focus{outline:0;border-color:var(--terra);box-shadow:0 0 0 
   .hero-grid,.venue .wrap,.faq .wrap{grid-template-columns:1fr}
   .hero{padding-top:100px}
   .hero-art{max-width:420px;width:100%;margin:10px auto 0;order:-1}
-  .arch{aspect-ratio:auto;height:min(44vh,380px);outline-offset:8px}
+  .arch{aspect-ratio:auto;height:min(52vh,440px);outline-offset:8px}
+  .arch img{object-position:50% 30%}
   .art-tag{display:none}
   .two{grid-template-columns:1fr}
   .nests{grid-template-columns:1fr 1fr}
