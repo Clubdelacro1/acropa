@@ -1,0 +1,11 @@
+material/
+.claude/
+*.pdf
+*.xlsx
+*.xls
+*.docx
+/*.jpg
+/*.jpeg
+/*.png
+/*.mp4
+/*.mov

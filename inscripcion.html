@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- BORRADOR: quitar esta línea cuando la web se publique de verdad -->
+<meta name="robots" content="noindex, nofollow">
+<title>Register · AcrOpa 2027</title>
+<meta name="theme-color" content="#3A2130">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<nav id="nav" class="solid">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo" aria-label="AcrOpa"><span class="logo-sun" aria-hidden="true"></span><span>ACR<i>O</i>PA</span></a>
+    <div class="right">
+      <div class="langs" role="group" aria-label="Language"><button data-set="en">EN</button><button data-set="es">ES</button><button data-set="el">ΕΛ</button></div>
+    </div>
+  </div>
+</nav>
+
+<main class="form-page">
+  <div class="wrap">
+    <a href="index.html" class="back" data-t="f.back">← Back to AcrOpa</a>
+    <p class="eyebrow" data-t="f.eyebrow">AcrOpa 2027 · 6–11 August</p>
+    <h1 data-t="f.title" data-html>Save your <span class="it grad">spot</span></h1>
+    <p class="form-intro" data-t="f.intro">Fill in the details below to save your spot. We'll get back to you on WhatsApp with the payment details for the deposit.</p>
+
+    <form id="reg" novalidate>
+      <div class="steps" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+
+      <!-- 1 · entrada -->
+      <fieldset class="on" data-step="0">
+        <legend data-t="f.s0">Your ticket</legend>
+        <div class="field" data-req="ticket">
+          <span class="lbl"><span data-t="f.ticket">Ticket</span> <span class="req">*</span></span>
+          <div class="opts">
+            <label><input type="radio" name="ticket" value="Early Bird €220"><span>Early Bird · €220</span></label>
+            <label><input type="radio" name="ticket" value="Regular €250"><span data-t="f.t.reg">Regular · €250</span></label>
+            <label><input type="radio" name="ticket" value="With partner €220/pp"><span data-t="f.t.partner">With my partner · €220 pp</span></label>
+            <label><input type="radio" name="ticket" value="Day pass €60/day"><span data-t="f.t.day">Day pass · €60/day</span></label>
+          </div>
+          <p class="err" data-t="f.err.pick">Choose an option</p>
+        </div>
+        <div class="field other" id="partner-f">
+          <label for="partner" data-t="f.partner">Your partner's name</label>
+          <input type="text" id="partner">
+        </div>
+        <div class="field other" id="days-f">
+          <label for="days" data-t="f.days">Which days?</label>
+          <input type="text" id="days" data-tp="f.days.ph" placeholder="Saturday 7 and Sunday 8">
+        </div>
+        <div class="field" data-req="status">
+          <span class="lbl"><span data-t="f.status">Status</span> <span class="req">*</span></span>
+          <div class="opts">
+            <label><input type="radio" name="status" value="Βάση / Single base"><span data-t="f.st.base">Single base</span></label>
+            <label><input type="radio" name="status" value="Single flyer"><span data-t="f.st.flyer">Single flyer</span></label>
+            <label><input type="radio" name="status" value="Κάνω και βάση και flyer / Single hybrid"><span data-t="f.st.hyb">Single hybrid (base &amp; flyer)</span></label>
+            <label><input type="radio" name="status" value="Με ζευγάρι / Committed to my partner"><span data-t="f.st.couple">Committed to my partner</span></label>
+          </div>
+          <p class="err" data-t="f.err.pick">Choose an option</p>
+        </div>
+      </fieldset>
+
+      <!-- 2 · datos personales -->
+      <fieldset data-step="1">
+        <legend data-t="f.s1">About you</legend>
+        <div class="field" data-req="name">
+          <label for="name"><span data-t="f.name">Name &amp; surname</span> <span class="req">*</span></label>
+          <input type="text" id="name" autocomplete="name">
+          <p class="err" data-t="f.err.fill">This field is required</p>
+        </div>
+        <div class="field" data-req="phone">
+          <label for="phone"><span data-t="f.phone">Mobile phone (WhatsApp)</span> <span class="req">*</span></label>
+          <input type="tel" id="phone" autocomplete="tel" placeholder="+30 …">
+          <p class="err" data-t="f.err.fill">This field is required</p>
+        </div>
+        <div class="field">
+          <label for="ig">Instagram</label>
+          <input type="text" id="ig" placeholder="@">
+        </div>
+        <div class="field" data-req="emerg">
+          <label for="emerg"><span data-t="f.emerg">Emergency contact · name, surname &amp; phone</span> <span class="req">*</span></label>
+          <input type="text" id="emerg">
+          <p class="err" data-t="f.err.fill">This field is required</p>
+        </div>
+        <div class="field">
+          <span class="lbl" data-t="f.from">I am travelling from</span>
+          <div class="opts">
+            <label><input type="radio" name="from" value="Αθήνα - Athens"><span data-t="f.from.ath">Athens</span></label>
+            <label><input type="radio" name="from" value="Πάτρα - Patra"><span data-t="f.from.pat">Patras</span></label>
+            <label><input type="radio" name="from" value="__other_option__"><span data-t="f.other">Other</span></label>
+          </div>
+          <input type="text" class="other" id="from-o" data-tp="f.from.ph" placeholder="City / country">
+        </div>
+        <div class="field">
+          <span class="lbl" data-t="f.with">I will come with</span>
+          <div class="opts">
+            <label><input type="checkbox" name="with" value="Αυτοκίνητο / Car"><span data-t="f.w.car">Car</span></label>
+            <label><input type="checkbox" name="with" value="Κάμπερ / Campervan"><span data-t="f.w.van">Campervan</span></label>
+            <label><input type="checkbox" name="with" value="Σκηνή / Tent"><span data-t="f.w.tent">Tent</span></label>
+            <label><input type="checkbox" name="with" value="__other_option__"><span data-t="f.other">Other</span></label>
+          </div>
+          <input type="text" class="other" id="with-o" data-tp="f.with.ph" placeholder="I need camping equipment, bus…">
+        </div>
+        <div class="field" data-req="diet">
+          <span class="lbl"><span data-t="f.diet">Food: allergy, preference or restriction</span> <span class="req">*</span></span>
+          <div class="opts">
+            <label><input type="checkbox" name="diet" value="Flexitarian / Omnivore"><span data-t="f.d.omni">Omnivore / flexitarian</span></label>
+            <label><input type="checkbox" name="diet" value="Pescetarian"><span data-t="f.d.pesc">Pescetarian</span></label>
+            <label><input type="checkbox" name="diet" value="Vegetarian"><span data-t="f.d.veg">Vegetarian</span></label>
+            <label><input type="checkbox" name="diet" value="Vegan"><span>Vegan</span></label>
+            <label><input type="checkbox" name="diet" value="__other_option__"><span data-t="f.d.other">Allergy / other</span></label>
+          </div>
+          <input type="text" class="other" id="diet-o" data-tp="f.diet.ph" placeholder="Tell us more">
+          <p class="err" data-t="f.err.pick">Choose an option</p>
+        </div>
+        <div class="field">
+          <label for="about" data-t="f.about">I would like to share something about me</label>
+          <textarea id="about"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- 3 · acro -->
+      <fieldset data-step="2">
+        <legend data-t="f.s2">Your acro</legend>
+        <div class="field" data-req="level">
+          <span class="lbl"><span data-t="f.level">I identify as</span> <span class="req">*</span></span>
+          <div class="opts">
+            <label><input type="radio" name="level" value="Αρχάριος / Beginner"><span data-t="f.l.beg">Beginner</span></label>
+            <label><input type="radio" name="level" value="Μεσαίο επίπεδο / Intermediate"><span data-t="f.l.int">Intermediate</span></label>
+            <label><input type="radio" name="level" value="Προχωρημένος / Pro"><span data-t="f.l.pro">Advanced</span></label>
+          </div>
+          <p class="err" data-t="f.err.pick">Choose an option</p>
+        </div>
+        <div class="field" data-req="interest">
+          <span class="lbl"><span data-t="f.interest">I am particularly interested in</span> <span class="req">*</span></span>
+          <div class="opts">
+            <label><input type="checkbox" name="interest" value="Acro-flows"><span>Acro-flows</span></label>
+            <label><input type="checkbox" name="interest" value="Standing Tricks"><span>Standing tricks</span></label>
+            <label><input type="checkbox" name="interest" value="Pops &amp; Icarians"><span>Pops &amp; icarians</span></label>
+            <label><input type="checkbox" name="interest" value="Κατακόρυφο / Handstand"><span>Handstand</span></label>
+            <label><input type="checkbox" name="interest" value="Έλα ντε! / I am not sure - Curious"><span data-t="f.i.cur">Not sure — curious!</span></label>
+          </div>
+          <p class="err" data-t="f.err.pick">Choose an option</p>
+        </div>
+        <div class="field">
+          <label for="idea" data-t="f.idea">I would like to share an idea</label>
+          <textarea id="idea"></textarea>
+        </div>
+        <div class="field" data-req="injury">
+          <span class="lbl"><span data-t="f.injury">Do you have an injury, condition or chronic illness that needs medical clearance or special attention?</span> <span class="req">*</span></span>
+          <div class="opts">
+            <label><input type="radio" name="injury" value="Ναι / Yes"><span data-t="f.yes">Yes</span></label>
+            <label><input type="radio" name="injury" value="Όχι / No"><span data-t="f.no">No</span></label>
+          </div>
+          <p class="err" data-t="f.err.pick">Choose an option</p>
+        </div>
+        <div class="field other" id="inj-f" data-req="injd">
+          <label for="injd"><span data-t="f.injd">Please tell us about it, so we can adapt the practice</span> <span class="req">*</span></label>
+          <textarea id="injd"></textarea>
+          <p class="err" data-t="f.err.fill">This field is required</p>
+        </div>
+      </fieldset>
+
+      <!-- 4 · consentimiento -->
+      <fieldset data-step="3">
+        <legend data-t="f.s3">Consent</legend>
+        <div class="consent">
+          <p><b data-t="f.c1t">1. Liability disclaimer.</b> <span data-t="f.c1">I fully understand that taking part in AcrOpa involves physical activity and outdoor conditions. I accept full responsibility for my health and safety and waive any legal or financial claims against the organisers in case of accident, injury or loss of personal items.</span></p>
+          <p><b data-t="f.c2t">2. First aid.</b> <span data-t="f.c2">In case of emergency, I consent to receive first aid and, if needed, to be taken to the nearest medical centre.</span></p>
+          <p><b data-t="f.c3t">3. Photo &amp; video.</b> <span data-t="f.c3">I agree to be photographed or filmed during the event for communication and promotional purposes. I can ask for my personal material to be removed at any time.</span></p>
+          <p><b data-t="f.c4t">4. Data protection (GDPR).</b> <span data-t="f.c4">My personal data will be used only for communication about this event and will not be shared with third parties, in line with the General Data Protection Regulation 2016/679.</span></p>
+        </div>
+        <div class="field" data-req="consent">
+          <label class="check"><input type="checkbox" id="consent"><span data-t="f.consent">I have read and I consent to all of the above.</span></label>
+          <p class="err" data-t="f.err.consent">You need to accept to register</p>
+        </div>
+      </fieldset>
+
+      <div class="nav-btns">
+        <button type="button" class="btn line" id="prev" hidden><span data-t="f.prev">← Back</span></button>
+        <button type="button" class="btn fill" id="next"><span data-t="f.next">Continue</span><span class="arr">→</span></button>
+        <button type="submit" class="btn fill light" id="send" hidden><span data-t="f.send">Save my spot</span><span class="arr">→</span></button>
+      </div>
+      <p class="err" id="send-err" data-t="f.err.send">Something went wrong. Please try again, or write to us on WhatsApp.</p>
+    </form>
+
+    <div class="done" id="done">
+      <div class="sunmark" aria-hidden="true"></div>
+      <h2 data-t="f.done.t" data-html>See you under<br>the <span class="it grad">olive trees!</span></h2>
+      <p data-t="f.done.p">We received your registration. We'll write to you on WhatsApp very soon with the details for the deposit.</p>
+      <a href="index.html" class="btn line" data-t="f.back2">Back to the website</a>
+    </div>
+  </div>
+</main>
+
+<div class="meander" aria-hidden="true"></div>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>
